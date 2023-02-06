@@ -1,0 +1,137 @@
+{{ define "main" }}
+ 
+       <!--ads atart-->
+     <section class="ads1 ads1-1">
+        <div class="container-fluid">
+            <div class="row ads-cover">
+                <div class="ads-content col-md-8">
+                    <img src="{{ .Site.BaseURL }}img/ads-banner.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--ads end-->
+    <!--play video start-->
+    <div class="container-fluid">
+
+      <div class="row auto-play-video">
+          <div class="col-lg-8 auto-play-video-video">
+              <video id="video-id" class="video-view">
+
+                  <source data-fluid-hd src='{{ .Site.BaseURL }}{{ .Params.videoUrl }}' title='1080p'
+                      type='video/mp4' />
+                  <source data-fluid-hd src='{{ .Site.BaseURL }}{{ .Params.videoUrl }}' title='720p'
+                      type='video/mp4' />
+                  <source src='{{ .Site.BaseURL }}{{ .Params.videoUrl }}' title='720p' type='video/mp4' />
+                  <source src='{{ .Site.BaseURL }}{{ .Params.videoUrl }}' title='480p' type='video/mp4' />
+                  <source src='{{ .Site.BaseURL }}{{ .Params.videoUrl }}' title='360p' type='video/mp4' />
+          </div>
+          <div class="col-lg-8 ">
+              <div class="play-video-des">
+
+                  <h1>{{ .Params.videoName }}</h1>
+
+                  <div class="p-v-des">
+
+                      <p class="p-p-1">{{ .Params.length }} <span class="video-view">{{ .Params.views }}</span> <span><i
+                                  class="fa-regular fa-eye"></i></span>
+                      </p>
+
+                      <p class="p-p-2">video description as your requerment</p>
+                  </div>
+              </div>
+          </div>
+          <div class="side-ads">
+              <div class="side-ads1 side">
+                  ads
+              </div>
+              <div class="side-ads2 side">
+                  ads
+              </div>
+          </div>
+          <div class="side-ads1">
+
+          </div>
+      </div>
+  </div>
+
+
+  <!--play video end-->
+
+</div>
+
+ <!--ads atart-->
+ <section class="ads1-2">
+  <div class="container-fluid">
+      <div class="row ads-cover">
+          <div class="ads-content col-md-8">
+              <img src="{{ .Site.BaseURL }}img/ads-banner.png" alt="">
+          </div>
+
+      </div>
+  </div>
+</section>
+
+<!--ads end-->
+
+
+
+<section class="video ">
+  <div class="container-fluid">
+      <div class="row ">
+          <div class="video-title">
+              <h1 class="v-t-1">Latest video</h1>
+              <h5 class="v-t-2">20000 Video</h5>
+          </div>
+
+      </div>
+  </div>
+
+        <div  class="container-fluid d-flex justify-content-center">
+          <div class="row video-all ">
+ 
+            {{ range ( where .Site.RegularPages "Type" "blog" | first 10 ) }}
+            
+           
+            
+              <div class=" g-2 v-item col-md-4 col-sm-6">
+                  <div class="video-box">
+                      <a href='{{ .RelPermalink }}'>
+                          <img src= "{{ .Site.BaseURL }}{{ .Params.thumbnail }}" alt="thumbnail">
+                          <p>{{ .Params.videoName }}</p>
+                      </a>
+                  </div>
+
+                  <div class="video-des">
+                      <div class="v-des">
+                          <p>{{ .Params.length }}</p>
+                          <p>{{ .Params.views }} <span><i class="fa-regular fa-eye"></i></span></p>
+                      </div>
+                  </div>
+              </div>
+                 
+               {{ end }}
+          </div>
+
+
+</div>
+</section>
+
+ <!--ads start-->
+ <section class="ads2">
+  <div class="container-fluid">
+      <div class="row ads-cover">
+          <div class="ads-content col-md-8">
+              <img src="{{ .Site.BaseURL }}img/ads-banner.png" alt="">
+          </div>
+
+      </div>
+  </div>
+</section>
+
+<!--ads end-->
+
+{{ end }}
+

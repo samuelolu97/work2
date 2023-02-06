@@ -1,0 +1,93 @@
+
+
+    <!--ads start-->
+    <section class="ads2">
+        <div class="container-fluid">
+            <div class="row ads-cover">
+                <div class="ads-content col-md-8">
+                    <img src="img/ads-banner.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--ads end-->
+
+
+    <!--vest video start-->
+    <section class="best-video">
+        <div class="container-fluid">
+            <div class="row best-vodeo-raper">
+                <div class="best-vider-head col-md-12">
+                    <h2>watch the Best Video</h2>
+                </div>
+                <div class="best-vodeo-cove col-md-10">
+                    <P> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia doloribus perspiciatis
+                        eveniet
+                        esse similique nesciunt. Voluptatem incidunt amet ab quas cupiditate rerum perspiciatis aperiam
+                        voluptates, nam consectetur, blanditiis possimus, dolore maiores nihil soluta similique
+                        mollitia.
+                        Minus excepturi, ducimus eum modi consectetur qui libero perferendis beatae. Pariatur eius ipsum
+                        ipsam quisquam? Placeat sequi aliquid quod esse id. Necessitatibus saepe provident deserunt ab
+                        illo,
+                        animi iusto odio, esse fugiat fugit labore. Dolore impedit ab natus deleniti, possimus sed animi
+                        non
+                        est perferendis aut nostrum ratione, dolor repudiandae. Ipsa fugit mollitia eligendi ea natus,
+                        iusto
+                        vel, quisquam in dolores facilis dolorem animi officiis?
+                    </P>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--vest video end-->
+
+    <!--footer start-->
+    <footer id="footer" class="footer">
+
+        <div class="container-fluid">
+            <div class="row f-footer">
+                <p>
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>&nbsp;&nbsp;
+                    <a href="#"><i class="fab fa-twitter"></i></a>&nbsp;&nbsp;
+                    <a href="#"><i class="fab fa-instagram"></i></a>&nbsp;&nbsp;
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a></p>
+                <p><span class="c-t">Copyright</span> <span class="c-s">&#169;</span><a href="#">xyz.com</a></p>
+            </div>
+        </div>
+
+    </footer>
+
+    <!--footer end-->
+
+    {{ range .Site.Params.customJS }}
+    {{ if ( or ( hasPrefix . "http://" ) ( hasPrefix . "https://" ) ) }}
+        <!-- remote js -->
+        <script src="{{ . }}"></script>
+    {{ else }}
+        <!-- local js -->
+        <script  type="text/javascript" src="{{ $.Site.BaseURL }}{{ . }}"></script>
+    {{ end }}
+{{ end }}
+
+
+
+    <!--html5 shiv js for Enabling HTML5 Shiv Script and Print Support on old IE6-9 Browser Safari 4.x-->
+    <script src="{{ .Site.BaseURL }}vandor/js/html5shiv-printshiv.min.js"></script>
+   
+    <!--Respond.js is a fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more).-->
+    <script src="{{ .Site.BaseURL }}vandor/js/respond.min.js"></script>
+    
+    <!--selectivizr is a JavaScript utility that emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8..-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <!--google hosted jquery cdn..-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!--bootstrap js cdn..-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!--video js cdn..-->
+    <script src="{{ .Site.BaseURL }}js/javascript.js"></script>
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+    

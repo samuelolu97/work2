@@ -1,0 +1,81 @@
+{{ define "main" }}
+
+   <!--ads atart-->
+   <section class="ads1">
+    <div class="container-fluid">
+        <div class="row ads-cover">
+            <div class="ads-content col-md-8">
+                <img src="{{ .Site.BaseURL }}img/ads-banner.png" alt="">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--ads end-->
+
+<section class="video ">
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="video-title">
+                <h1 class="v-t-1">Latest video</h1>
+                <h5 class="v-t-2">20000 Video</h5>
+            </div>
+
+        </div>
+    </div>
+
+          <div  class="container-fluid d-flex justify-content-center">
+            <div class="row video-all ">
+                {{ $pages := .Site.RegularPages }}
+                {{ $paginator := .Paginate ($pages) 15 }}
+                {{ range $paginator.Pages }}
+                  
+
+
+                <div class=" g-2 v-item col-md-4 col-sm-6">
+                    <div class="video-box">
+                        <a href='{{ .RelPermalink }}'>
+                            <img src= "{{ .Site.BaseURL }}{{ .Params.thumbnail }}" alt="thumbnail">
+                            <p>{{ .Params.videoName }}</p>
+                        </a>
+                    </div>
+
+                    <div class="video-des">
+                        <div class="v-des">
+                            <p>{{ .Params.length }}</p>
+                            <p>{{ .Params.views }} <span><i class="fa-regular fa-eye"></i></span></p>
+                        </div>
+                    </div>
+                </div>
+                   
+                 {{ end }}
+            </div>
+
+
+</div>
+</section>
+
+{{ if or ($paginator.HasPrev) ($paginator.HasNext) }}
+<div class="pagination">
+  {{ if $paginator.HasPrev }}
+      <span class="prev">
+          <a href="{{.Paginator.Prev.URL}}">
+              <span class="arrow">←</span>prev
+          </a>
+    </span>
+  {{ end }}
+  
+  {{ if $paginator.HasNext }}
+      <span class="next">
+          <a href="{{.Paginator.Next.URL}}">
+             next <span class="arrow">→</span>
+          </a>
+      </span>
+  {{ end }}
+</div>
+{{ end }}
+
+
+{{ end }}
+
