@@ -26,7 +26,8 @@
   <!-- City -->
   <link href="https://unpkg.com/@videojs/themes@1/dist/forest/index.css" rel="stylesheet" />
   <!--main css-->
-
+   
+  
   <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
   <!--media css for responsive-->
   
@@ -47,11 +48,24 @@
   <!-- forest -->
  
   <!--main css-->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
   <!--fluid video player..-->
   <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
 
 </head>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', user => {
+      if (!user) {
+        window.netlifyIdentity.on('login', () => {
+          document.location.href = '/admin/';
+        });
+      }
+    });
+  }
+</script>
 
 
 
