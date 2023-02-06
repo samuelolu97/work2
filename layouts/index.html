@@ -28,7 +28,7 @@
           <div  class="container-fluid d-flex justify-content-center">
             <div class="row video-all ">
                 {{ $pages := .Site.RegularPages }}
-                {{ $paginator := .Paginate ($pages) 15 }}
+                {{ $paginator := .Paginate ($pages) 10 }}
                 {{ range $paginator.Pages }}
                   
 
