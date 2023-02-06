@@ -1,5 +1,5 @@
 +++
-
+description = "Guide to emoji usage in Hugo"
 thumbnail = "img/Chill with music.webp"
 videoName = "merry christmas "
 length = "10 Min - 360p"
