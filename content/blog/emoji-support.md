@@ -1,17 +1,17 @@
-+++
-author = "Hugo Authors"
-title = "Emoji Support"
-date = "2019-03-05"
-description = "Guide to emoji usage in Hugo"
-tags = [
-    "emoji",
-]
-thumbnail = "img/Chill with music.webp"
-videoName = "merry christmas "
-length = "10 Min - 360p"
-views = "1000k"
-videoUrl = "video/WhatsApp Video 2022-12-10 at 8.20.01 PM.mp4"
-+++
+---
+author: Hugo Authors
+title: Emoji Support
+videoName: "merry christmas "
+date: 2019-03-05
+videoUrl: video/WhatsApp Video 2022-12-10 at 8.20.01 PM.mp4
+description: Guide to emoji usage in Hugo
+tags:
+  - emoji
+thumbnail: img/Chill with music.webp
+length: 1hr - 760p
+views: 1000k
+layout: blog
+---
 
 Emoji can be enabled in a Hugo project in a number of ways. 
 <!--more-->
