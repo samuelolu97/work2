@@ -18,10 +18,10 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'thumbnail', name: 'thumbnail', widget: 'image' }
       - { label: 'length', name: 'length', widget: 'string' }
-      - {label: 'videoUrl',
+      - label: 'videoUrl',
         name: 'videoUrl',
         widget: 'file',
         media_library:
           {config:
-             max_file_size: 512000000000000000000000000000 # in bytes, only for default media library } }    
+             max_file_size: 512000000000000000000000000000 }     
       - { label: 'description', name: 'description', widget: 'string' }  
