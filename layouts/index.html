@@ -36,8 +36,12 @@
                 <div class=" g-2 v-item col-md-4 col-sm-6">
                     <div class="video-box">
                         <a href='{{ .RelPermalink }}'>
-                            <img src= "{{ .Site.BaseURL }}{{ .Params.thumbnail }}" alt="thumbnail">
+                        
+
+                            <img src= "{{ .Site.BaseURL }}{{ .Params.thumbnail }}" loading="lazy" alt="image showing the poster for the video" title="{{.Params.videoName}}">
                             <p>{{ .Params.videoName }}</p>
+                            
+                           
                         </a>
                     </div>
 
@@ -59,7 +63,7 @@
 {{ if or ($paginator.HasPrev) ($paginator.HasNext) }}
 <div class="pagination">
   {{ if $paginator.HasPrev }}
-      <span class="prev">
+      <span class="prev" id="prev">
           <a href="{{.Paginator.Prev.URL}}">
               <span class="arrow">←</span>prev
           </a>
@@ -67,7 +71,7 @@
   {{ end }}
   
   {{ if $paginator.HasNext }}
-      <span class="next">
+      <span class="next" id="next">
           <a href="{{.Paginator.Next.URL}}">
              next <span class="arrow">→</span>
           </a>

@@ -52,10 +52,30 @@
                     <a href="#"><i class="fab fa-facebook-square"></i></a>&nbsp;&nbsp;
                     <a href="#"><i class="fab fa-twitter"></i></a>&nbsp;&nbsp;
                     <a href="#"><i class="fab fa-instagram"></i></a>&nbsp;&nbsp;
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a></p>
-                <p><span class="c-t">Copyright</span> <span class="c-s">&#169;</span><a href="#">xyz.com</a></p>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>&nbsp;&nbsp;
+                    {{ range .Site.Params.footer.quicklinks }}
+                    <a href="{{ .link }}">{{ .text  | markdownify }}</a>&nbsp;&nbsp;
+                    {{ end }}
+                
+                
+                </p>
+
+                   
+                      
+                    
+
+                <p><span class="c-t">Copyright</span> <span class="c-s">&#169;</span><a href="#">xyz.com</a>
+                    
+                </p>
+                
             </div>
+
+            
+         
+
         </div>
+
+       
 
     </footer>
 

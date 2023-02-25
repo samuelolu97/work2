@@ -1,3 +1,17 @@
 baseURL = '/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+
+enableRobotsTXT = true
+
+[outputs]
+    home = [ "HTML", "JSON", "RSS"]
+
+[[params.footer.quicklinks]]
+                        text = "Privacy"
+                        link = "/privacy" 
+
+
+[[params.footer.quicklinks]]                      
+                        text = "Terms of Service"
+                        link = "/terms"
