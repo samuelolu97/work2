@@ -37,7 +37,7 @@
                     <div class="video-box">
                         <a href='{{ .RelPermalink }}'>
                         
-                            {{ $image := .Page.Resources.GetMatch .Params.image }}
+                            
 
                             <img src= "{{ .Site.BaseURL }}{{ .Params.thumbnail }}" loading="lazy" alt="image showing the poster for the video" title="{{.Params.videoName}}">
                             <p>{{ .Params.videoName }}</p>
