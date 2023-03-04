@@ -198,6 +198,10 @@ input.s-btn {
     object-fit: cover;
 }
 
+#vidimage{
+    height: 13rem;
+    width: 100%;
+}
 .v-item a {
     text-decoration: none;
 }
